@@ -42,3 +42,26 @@ createDots('dotsleft');
 createDots('dotsright');
 //====Dots=====
 
+
+
+$(document).ready(function () {
+       var owl = $(".customer-review .owl-carousel");
+       owl.owlCarousel({
+              items: 1,
+              loop: true,
+              margin: 10,
+              dots: false,
+              nav: false,
+              autoplay: false,
+              autoplayTimeout: 5000,
+              autoplayHoverPause: true
+       });
+
+       $('#customPrev').click(function () {
+              owl.trigger('prev.owl.carousel');
+       });
+
+       $('#customNext').click(function () {
+              owl.trigger('next.owl.carousel');
+       });
+});
