@@ -374,8 +374,8 @@ header li a.active {
   transform: translateY(0);
   border-bottom: 1px solid transparent;
 }
-.industries-serve .serve-row:hover  h3,
-.industries-serve .serve-row:hover  p{
+.industries-serve .serve-row:hover h3,
+.industries-serve .serve-row:hover p {
   color: var(--white);
 }
 .industries-serve .show-bg img {
