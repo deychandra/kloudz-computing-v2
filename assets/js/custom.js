@@ -40,6 +40,7 @@ function createDots(containerId) {
 
 createDots('dotsleft');
 createDots('dotsright');
+createDots('dotslg');
 //====Dots=====
 
 
