@@ -11,8 +11,6 @@
   --secondary: #585858;
   --poppins: "Poppins", serif;
   --montserrat: "Montserrat", serif;
-  --dot-size: 4px;
-  --grid-size: 24px;
 }
 
 * {
@@ -290,30 +288,7 @@ header li a.active {
   z-index: 1;
 }
 
-/*===Dots===*/
-.hero .dots {
-  display: grid;
-  grid-template-columns: repeat(20, var(--grid-size));
-  grid-template-rows: repeat(20, var(--grid-size));
-  gap: 4px;
-  opacity: 0.1;
-}
-
-.hero .dot {
-  width: var(--dot-size);
-  height: var(--dot-size);
-  border-radius: 50%;
-  animation: wave 2s ease-in-out infinite;
-}
-
-#dotsleft .dot {
-  animation-name: waveLeft;
-}
-
-#dotsright .dot {
-  animation-name: waveRight;
-}
-
+/*===Dots Animation===*/
 @keyframes waveLeft {
   0%,
   100% {
@@ -330,30 +305,10 @@ header li a.active {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(15px); /* opposite direction */
+    transform: translateY(15px);
   }
 }
-
-.left-dot {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.left-dot::before {
-  content: "";
-}
-.dot-container {
-  z-index: 0;
-  width: 24%;
-  overflow: hidden;
-}
-
-.right-dot {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-/*===Dots===*/
+/*===Dots Animation===*/
 
 .parallax-container {
   perspective: 1000px;
@@ -437,8 +392,11 @@ header li a.active {
 /*===Industries-we-serve===*/
 
 /*===Customer-Review===*/
-.customer-review{
+.customer-review {
   overflow: hidden;
+}
+.customer-review .center-primary-div {
+  padding-bottom: 50px;
 }
 .customer-review .customer-review-wrap p {
   color: #3f3f3f;
@@ -519,10 +477,10 @@ header li a.active {
   position: relative;
   z-index: 3;
 }
-.customer-review .owl-carousel{
+.customer-review .owl-carousel {
   z-index: 3;
 }
-.customer-review .animated-map{
+.customer-review .animated-map {
   position: absolute;
   z-index: 2;
   top: 50%;
@@ -530,17 +488,17 @@ header li a.active {
   transform: translate(-50%, -50%);
   width: calc(100% - 480px);
 }
-.customer-review .animated-map::before{
+.customer-review .animated-map::before {
   content: "";
   position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #fafaf9, #fbfbfb, #fafaf9);
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 200px);
+  height: calc(100% + 200px);
+  background: linear-gradient(135deg, #fdfcfb, #fbfbfb, #fdfcfb);
   filter: blur(50px);
   z-index: -1;
+  transform: translate(-50%, -50%);
 }
 .customer-review .customer-review-wrap {
   position: relative;
@@ -836,33 +794,11 @@ footer .copy-right {
   z-index: -1;
   filter: blur(60px);
 }
-.we-care-it .dots {
-  display: grid;
-  grid-template-columns: repeat(40, 1fr);
-  grid-template-rows: repeat(20, var(--grid-size));
-  gap: 4px;
-  opacity: 0.1;
-}
 
-.we-care-it .dot {
-  width: var(--dot-size);
-  height: var(--dot-size);
-  border-radius: 50%;
-  animation: wave 5s ease-in-out infinite;
-}
 .we-care-it {
   position: relative;
 }
-.we-care-it .dot-bx {
-  position: absolute;
-  top: 110px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-#dotslg .dot {
-  animation-name: waveLeft;
-}
+
 /*====We-care-it====*/
 
 /*====Our-Services====*/

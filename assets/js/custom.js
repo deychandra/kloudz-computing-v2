@@ -18,57 +18,6 @@ container.addEventListener('mouseleave', () => {
 
 
 
-//====Dots=====
-// const rows = 20;
-// const cols = 20;
-// function createDots(containerId) {
-//        const dotsContainer = document.getElementById(containerId);
-//        for (let y = 0; y < rows; y++) {
-//               for (let x = 0; x < cols; x++) {
-//                      const dot = document.createElement('div');
-//                      dot.classList.add('dot');
-//                      const delay = (x * 0.05 + y * 0.05).toFixed(2);
-//                      dot.style.animationDelay = `${delay}s`;
-//                      dot.style.backgroundColor = '#465579';
-
-//                      dotsContainer.appendChild(dot);
-//               }
-//        }
-// }
-
-// createDots('dotsleft');
-// createDots('dotsright');
-// createDots('dotslg');
-
-
-const rows = 20;
-const cols = 20;
-
-function createDots(containerId) {
-       const dotsContainer = document.getElementById(containerId);
-       if (!dotsContainer) return;
-
-       const fragment = document.createDocumentFragment();
-       const baseDot = document.createElement('div');
-       baseDot.className = 'dot';
-       baseDot.style.backgroundColor = '#465579';
-
-       for (let y = 0; y < rows; y++) {
-              for (let x = 0; x < cols; x++) {
-                     const dot = baseDot.cloneNode();
-                     dot.style.animationDelay = `${x * 0.05 + y * 0.05}s`;
-                     fragment.appendChild(dot);
-              }
-       }
-
-       dotsContainer.appendChild(fragment);
-}
-
-['dotsleft', 'dotsright', 'dotslg'].forEach(createDots);
-
-//====Dots=====
-
-
 
 $(document).ready(function () {
        var owl = $(".customer-review .owl-carousel");
