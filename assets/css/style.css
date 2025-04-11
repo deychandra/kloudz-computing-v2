@@ -794,15 +794,30 @@ footer .copy-right {
   width: var(--dot-size);
   height: var(--dot-size);
   border-radius: 50%;
-  animation: wave 2s ease-in-out infinite;
+  animation: wave 5s ease-in-out infinite;
 }
 .we-care-it{
   position: relative;
 }
 .we-care-it .dot-bx{
   position: absolute;
-    top: 0;
+    top: 110px;
     left: 0;
     width: 100%;
+    height: 100%;
+}
+#dotslg .dot {
+  animation-name: waveLeft;
 }
 /*====We-care-it====*/
+
+/*====Our-Services====*/
+.our-services{
+  background-image: url("../images/our-services-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/*====Our-Services====*/
+
+

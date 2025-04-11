@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+       <style>
+               .orbit-wrapper {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border: 1px dashed gray;
+  }
+
+  .egg-orbit {
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid red;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: -100px center;
+    animation: orbit 5s linear infinite;
+  }
+
+  @keyframes orbit {
+    0%   { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+            </style>
+</head>
+<body>
+       
+
+
+       
+            
+       <div class="orbit-wrapper">
+              <div class="egg-orbit"></div>
+            </div>
+            
+
+
+
+
+</body>
+</html>
