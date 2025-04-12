@@ -727,6 +727,38 @@ header li a.active {
 /*====Footer====*/
 footer {
   background: linear-gradient(180deg, #a3a3f9 -12.23%, #7886d8 67.18%);
+  position: relative;
+  overflow: hidden;
+}
+footer .footer-container{
+  position: relative;
+  overflow: hidden;
+}
+
+footer .top-3d-star {
+  position: absolute;
+  top: -30px;
+  left: -50px;
+  animation: top-3d-starRotate 30s linear infinite;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+footer .top-3d-star img{
+  max-width: 160px;
+}
+footer .btm-3d-star{
+  position: absolute;
+  bottom: -80px;
+  left: -70px;
+  animation: rotateOnly3D 15s linear infinite;
+  z-index: 1;
+}
+footer .rotate-3d-star{
+  position: absolute;
+  bottom: -80px;
+  right: -140px;
+  animation: rotateOnly3D 30s linear infinite;
+  z-index: 1;
 }
 
 footer .subheading {
