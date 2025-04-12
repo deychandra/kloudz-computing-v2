@@ -17,6 +17,23 @@ container.addEventListener('mouseleave', () => {
 });
 
 
+// Hover-image
+const listItems = document.querySelectorAll('.serve-row-container .serve-row');
+const firstLi = document.getElementById('firstList');
+
+listItems.forEach((serveRow, index) => {
+  if (index === 0) return;
+
+  serveRow.addEventListener('mouseenter', () => {
+    firstLi.classList.add('active-style');
+  });
+
+  serveRow.addEventListener('mouseleave', () => {
+    firstLi.classList.remove('active-style');
+  });
+});
+// Hover-image
+
 
 
 $(document).ready(function () {

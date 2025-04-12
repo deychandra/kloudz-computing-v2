@@ -432,11 +432,43 @@ header li a.active {
   transition: all 0.3s linear;
   transform: translateY(10px);
 }
-
-.industries-serve .serve-row:hover .show-bg,
-.industries-serve .serve-row:hover {
+.industries-serve .serve-row:first-child .show-bg {
   opacity: 1;
   transform: translateY(0);
+}
+.industries-serve .serve-row:first-child {
+  border-bottom: 1px solid transparent;
+}
+.industries-serve .serve-row.active-style {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.industries-serve .serve-row:first-child h3,
+.industries-serve .serve-row:first-child p {
+  color: var(--white);
+}
+
+.industries-serve .serve-row.active-style:first-child .show-bg {
+  opacity: 0;
+}
+
+.industries-serve .serve-row.active-style:first-child h3 {
+  color: #1e242a;
+}
+.industries-serve .serve-row.active-style:first-child .row-des p {
+  color: #1c2126;
+}
+
+.industries-serve .serve-row:first-child h3,
+.industries-serve .serve-row:first-child p {
+  color: var(--white);
+}
+
+.industries-serve .serve-row:hover .show-bg {
+  opacity: 1;
+  transform: translateY(0);
+}
+.industries-serve .serve-row:hover {
   border-bottom: 1px solid transparent;
 }
 
