@@ -105,7 +105,6 @@ body {
   border-radius: 66px;
   font-size: 16px;
   font-weight: 400;
-  min-width: 242px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -124,6 +123,23 @@ footer .slide-btn span {
   justify-content: center;
   padding: 10px;
   background-color: #6682d4;
+}
+.slide-btn:hover{
+  color: var(--white);
+  background-color: var(--black);
+}
+.slide-btn:hover span {
+  background-color: var(--white);
+}
+.slide-btn svg{
+  transition: all 0.4s ease-out;
+}
+.slide-btn:hover svg {
+  transform: rotate(45deg);
+}
+.slide-btn:hover path{
+  color: var(--black);
+  fill: var(--black);
 }
 /*===Global===*/
 
