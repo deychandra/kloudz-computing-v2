@@ -287,6 +287,91 @@ header li a.active {
   animation: rotateOnly3D 30s linear infinite;
   z-index: 1;
 }
+.hero .left-dot-waves {
+  position: absolute;
+  bottom: -10px;
+  left: -20px;
+  width: 30%;
+  height: 79%;
+  background-image: radial-gradient(#c1c7d0 3px, transparent 3px);
+  background-size: 24px 24px;
+  background-position: center;
+  animation: smoothWave 10s linear infinite;
+  opacity: 0.3;
+  z-index: 0;
+}
+.hero .left-dot-waves::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(312deg, #fdfcfb, #fbfbfb8f, #fdfcfb);
+  filter: blur(80px);
+}
+
+.hero .right-dot-waves {
+  position: absolute;
+  bottom: -10px;
+  right: -20px;
+  width: 30%;
+  height: 79%;
+  background-image: radial-gradient(#c1c7d0 3px, transparent 3px);
+  background-size: 24px 24px;
+  background-position: center;
+  animation: smoothWave 10s linear infinite;
+  opacity: 0.3;
+  z-index: 0;
+}
+.hero .right-dot-waves::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fdfcfb, #fbfbfb8f, #fdfcfb);
+  filter: blur(10px);
+  z-index: 1;
+}
+
+@keyframes smoothWave {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(5px, -5px);
+  }
+  20% {
+    transform: translate(10px, -8px);
+  }
+  30% {
+    transform: translate(15px, -5px);
+  }
+  40% {
+    transform: translate(20px, 0px);
+  }
+  50% {
+    transform: translate(15px, 5px);
+  }
+  60% {
+    transform: translate(10px, 8px);
+  }
+  70% {
+    transform: translate(5px, 5px);
+  }
+  80% {
+    transform: translate(0px, 0px);
+  }
+  90% {
+    transform: translate(-5px, -3px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 
 /*===Dots Animation===*/
 @keyframes waveLeft {
