@@ -1152,6 +1152,7 @@ footer .copy-right {
   padding: 240px 0 130px;
   margin-top: -136px;
   position: relative;
+  overflow: hidden;
 }
 .inner-banner h1 {
   font-size: 90px;
@@ -1178,14 +1179,14 @@ footer .copy-right {
   top: 50%;
   left: 50%;
   width: 270px;
-  height: 210px;
+  height: 250px;
   position: absolute;
   background: linear-gradient(53.53deg, #6943ff 21.11%, #5fa8ff 50%, #6fe5ff 78.89%);
-  opacity: 40%;
+  opacity: 30%;
   backdrop-filter: blur(87.2727279663086px);
   z-index: -1;
   filter: blur(60px);
-  transition: top 0.3s ease-out, left 0.3s ease-out;
+  transition:all 0.3s ease-out;
   transform: translate(-50%, -50%);
 }
 /*====Inner Banner====*/

@@ -1,20 +1,22 @@
 const container = document.querySelector('.parallax-container');
-const item = container.querySelector('.it-solution');
+if (container) {
+    const item = container.querySelector('.it-solution');
+    
+    container.addEventListener('mousemove', (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 1;
+        const y = e.clientY - rect.top - rect.height / 2;
 
-container.addEventListener('mousemove', (e) => {
-       const rect = container.getBoundingClientRect();
-       const x = e.clientX - rect.left - rect.width / 1;
-       const y = e.clientY - rect.top - rect.height / 2;
+        const rotateX = (-y / 20).toFixed(100);
+        const rotateY = (x / 20).toFixed(5);
 
-       const rotateX = (-y / 20).toFixed(100);
-       const rotateY = (x / 20).toFixed(5);
+        item.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
 
-       item.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-});
-
-container.addEventListener('mouseleave', () => {
-       item.style.transform = 'rotateX(0deg) rotateY(0deg)';
-});
+    container.addEventListener('mouseleave', () => {
+        item.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+}
 
 
 // Hover-image
@@ -102,10 +104,14 @@ $(document).ready(function () {
        });
 
        function updateProgressBar() {
-              const progress = ((currentIndex + 1) / totalServices) * 100;
-              progressBar.style.width = `${progress}%`;
+              if (progressBar) {
+                     const progress = ((currentIndex + 1) / totalServices) * 100;
+                     progressBar.style.width = `${progress}%`;
+              }
        }
        function updateContent(index) {
+              if (!mainContent) return;
+              
               mainContent.classList.remove('slide-in');
               void mainContent.offsetWidth;
               mainContent.innerHTML = `
@@ -144,6 +150,9 @@ $(document).ready(function () {
 document.addEventListener("DOMContentLoaded", function () {
        const banner = document.querySelector(".inner-banner");
        const gradient = document.querySelector(".slider-gradient");
+       
+       if (!banner || !gradient) return;
+       
        gradient.style.transform = "none";
 
        banner.addEventListener("mousemove", function (e) {
@@ -158,7 +167,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Inner-Banner-slider
-
-
-console.log("Hello World");
-
