@@ -22,15 +22,15 @@ const listItems = document.querySelectorAll('.serve-row-container .serve-row');
 const firstLi = document.getElementById('firstList');
 
 listItems.forEach((serveRow, index) => {
-  if (index === 0) return;
+       if (index === 0) return;
 
-  serveRow.addEventListener('mouseenter', () => {
-    firstLi.classList.add('active-style');
-  });
+       serveRow.addEventListener('mouseenter', () => {
+              firstLi.classList.add('active-style');
+       });
 
-  serveRow.addEventListener('mouseleave', () => {
-    firstLi.classList.remove('active-style');
-  });
+       serveRow.addEventListener('mouseleave', () => {
+              firstLi.classList.remove('active-style');
+       });
 });
 // Hover-image
 
@@ -139,3 +139,26 @@ $(document).ready(function () {
        updateContent(currentIndex);
 });
 // Our-Services-slider
+
+
+document.addEventListener("DOMContentLoaded", function () {
+       const banner = document.querySelector(".inner-banner");
+       const gradient = document.querySelector(".slider-gradient");
+       gradient.style.transform = "none";
+
+       banner.addEventListener("mousemove", function (e) {
+              const rect = banner.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+              const leftPos = Math.min(Math.max((x / rect.width) * 100, 0), 100);
+              const topPos = Math.min(Math.max((y / rect.height) * 100, 0), 100);
+              gradient.style.left = `${leftPos}%`;
+              gradient.style.top = `${topPos}%`;
+       });
+});
+
+// Inner-Banner-slider
+
+
+console.log("Hello World");
+
