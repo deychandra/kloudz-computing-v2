@@ -612,6 +612,9 @@ header li a.active {
 }
 .customer-review .owl-carousel {
   z-index: 3;
+  max-width: 660px;
+  margin: auto;
+  width: 100%;
 }
 .customer-review .animated-map {
   position: absolute;
@@ -1252,10 +1255,14 @@ footer .copy-right {
   transform: rotate(45deg);
 }
 .get-in-touch .highlighter-text{
-color: #7584D6;
 font-size: 20px;
 font-weight: 500;
 margin-bottom: 10px;
 display: inline-block;
+background: linear-gradient(91.49deg, #7fdcfb 29.23%, #789de1 82.68%);
+background-size: 200% 200%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: rotateGradient 10s ease-in-out infinite;
 }
 /*====Get-In-Touch====*/
