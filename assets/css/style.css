@@ -1167,7 +1167,7 @@ footer .copy-right {
   text-align: center;
   line-height: normal;
   text-transform: capitalize;
-  max-width: 1035px;
+  max-width: 1205px;
   width: 100%;
   margin: auto;
 }
@@ -1716,10 +1716,13 @@ footer .copy-right {
   margin-right: auto;
 }
 .why-choose-kloudz .box-item {
-  background-color: var(--white);
+  background-color: transparent;
   padding: 25px 25px 0 25px;
   margin: 10px 0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+  overflow: hidden;
+  min-height: 380px;
 }
 .why-choose-kloudz strong {
   color: var(--black);
@@ -1734,9 +1737,10 @@ footer .copy-right {
   font-weight: 300;
 }
 .why-choose-kloudz .box-item img {
-  margin: 50px -25px 0 auto;
-  text-align: right;
-  width: 200px;
-  height: 200px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 270px;
+  z-index: -1;
 }
 /*====Why-choose-kloudz====*/
