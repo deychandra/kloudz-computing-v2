@@ -1461,4 +1461,104 @@ footer .copy-right {
   width: 100%;
 }
 
+.core-services .services-bx {
+  box-shadow: 3px 3px 13px 0px #0000000f;
+  border: 1px solid #cececd;
+  border-radius: 30px;
+  padding: 50px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.core-services .number-list {
+  font-size: 130px;
+  white-space: nowrap;
+  font-weight: 800;
+  color: rgb(205 205 205 / 0%);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #cdcdcd;
+  transition: text-shadow 0.3s;
+  font-style: italic;
+  position: relative;
+  margin-top: -70px;
+}
+
+.core-services .number-list::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 84px;
+  background: linear-gradient(135deg, #ffffff, #ffffff, #ffffff);
+  filter: blur(20px);
+}
+
+.core-services .services-bx:hover .number-list {
+  text-shadow: 4px 4px #7584d6;
+}
+.core-services .services-bx h3 {
+  color: var(--black);
+  font-family: var(--poppins);
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.core-services li {
+  display: inline-block;
+  padding: 15px 18px;
+  font-family: var(--montserrat);
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 15px 18px;
+  border-radius: 25px;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(111.45deg, #000000 18.22%, rgba(0, 0, 0, 0) 100.54%)
+      border-box;
+  border: 1px solid transparent;
+}
+
+.core-services .content-bx {
+  max-width: 720px;
+  width: 100%;
+}
+.core-services ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.core-services h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+.core-services .content-bx p {
+  color: #00000099;
+  font-size: 14px;
+  font-weight: 400;
+}
+.core-services .cta-btn {
+  margin: 30px auto 0 0;
+}
+.core-services .img-bx {
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
+  margin-top: 50px;
+  margin-bottom: -50px;
+  mix-blend-mode: Luminosity;
+  height: 318px;
+}
+.core-services .img-bx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /*==== Core-Services====*/
