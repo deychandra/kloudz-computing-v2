@@ -1,21 +1,21 @@
 const container = document.querySelector('.parallax-container');
 if (container) {
-    const item = container.querySelector('.it-solution');
-    
-    container.addEventListener('mousemove', (e) => {
-        const rect = container.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 1;
-        const y = e.clientY - rect.top - rect.height / 2;
+       const item = container.querySelector('.it-solution');
 
-        const rotateX = (-y / 20).toFixed(100);
-        const rotateY = (x / 20).toFixed(5);
+       container.addEventListener('mousemove', (e) => {
+              const rect = container.getBoundingClientRect();
+              const x = e.clientX - rect.left - rect.width / 1;
+              const y = e.clientY - rect.top - rect.height / 2;
 
-        item.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
+              const rotateX = (-y / 20).toFixed(100);
+              const rotateY = (x / 20).toFixed(5);
 
-    container.addEventListener('mouseleave', () => {
-        item.style.transform = 'rotateX(0deg) rotateY(0deg)';
-    });
+              item.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+       });
+
+       container.addEventListener('mouseleave', () => {
+              item.style.transform = 'rotateX(0deg) rotateY(0deg)';
+       });
 }
 
 
@@ -111,7 +111,7 @@ $(document).ready(function () {
        }
        function updateContent(index) {
               if (!mainContent) return;
-              
+
               mainContent.classList.remove('slide-in');
               void mainContent.offsetWidth;
               mainContent.innerHTML = `
@@ -150,9 +150,9 @@ $(document).ready(function () {
 document.addEventListener("DOMContentLoaded", function () {
        const banner = document.querySelector(".inner-banner");
        const gradient = document.querySelector(".slider-gradient");
-       
+
        if (!banner || !gradient) return;
-       
+
        gradient.style.transform = "none";
 
        banner.addEventListener("mousemove", function (e) {
@@ -167,3 +167,33 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Inner-Banner-slider
+
+// Text-Overlay
+
+document.addEventListener("DOMContentLoaded", () => {
+       gsap.registerPlugin(ScrollTrigger);
+
+       const textElements = document.querySelectorAll(".highlighted-text");
+
+       textElements.forEach(textElement => {
+              const text = textElement.textContent;
+              textElement.innerHTML = text.split("").map(char => `<span>${char}</span>`).join("");
+
+              const chars = textElement.querySelectorAll("span");
+
+              gsap.from(chars, {
+                     scrollTrigger: {
+                            trigger: textElement,
+                            start: "top 85%",
+                            end: "bottom 20%",
+                            scrub: true,
+                     },
+                     color: "#a0a0a0",
+                     stagger: 1, 
+                     duration: 1,
+              });
+       });
+})
+
+
+// Text-Overlay

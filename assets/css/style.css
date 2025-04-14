@@ -1607,3 +1607,101 @@ footer .copy-right {
   padding-left: 60px;
 }
 /*====Meets-Transformation====*/
+
+/*====Our-Vision====*/
+.our-vision strong {
+  color: #141414;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--montserrat);
+}
+.our-vision .highlighted-text {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 300;
+  position: relative;
+  color: var(--black);
+  overflow: hidden;
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+}
+.our-vision li {
+  font-size: 30px;
+  font-weight: 300;
+  color: #a0a0a0;
+  line-height: 45px;
+  padding-bottom: 80px;
+}
+.our-vision li:last-child {
+  padding-bottom: 0;
+}
+.our-vision li b {
+  font-weight: 400;
+  color: var(--black);
+}
+/*====Our-Vision====*/
+
+/*====what-we-do====*/
+.what-we-do {
+  background-image: url(../images/what-we-do-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+.what-we-do .left-align p {
+  color: var(--black);
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.what-we-do .left-align p > a {
+  display: inline;
+  color: #000000b2;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.what-we-do .left-align a {
+  color: #1676cb;
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.what-we-do .left-align a img {
+  transition: all 0.5s linear;
+}
+
+.what-we-do .left-align a:hover img {
+  transform: rotate(45deg);
+}
+
+.what-we-do .right-align {
+  text-align: left;
+}
+
+.what-we-do .left-align {
+  text-align: left;
+}
+
+.what-we-do .right-align img {
+  margin-bottom: 20px;
+}
+
+.what-we-do h5 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #121317;
+}
+
+.what-we-do p {
+  color: #000000b2;
+  font-size: 16px;
+  font-weight: 400;
+}
+/*====what-we-do====*/
