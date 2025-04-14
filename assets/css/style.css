@@ -187,7 +187,6 @@ header li a.active {
 .hero {
   padding: 150px 0 100px 0;
   width: 100%;
-  min-height: 100vh;
   background-image: url("../images/hero-background.svg.png");
   background-repeat: no-repeat;
   background-position: center;
