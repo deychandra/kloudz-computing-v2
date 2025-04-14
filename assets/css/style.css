@@ -1013,9 +1013,11 @@ footer .copy-right {
 }
 
 .our-services .slider-container {
-  padding-left: 50px;
   margin-top: 50px;
   display: flex;
+}
+.fluid-padding {
+  padding-left: 50px;
 }
 .our-services .main-content {
   width: calc(50% - 20px);
@@ -1705,3 +1707,36 @@ footer .copy-right {
   font-weight: 400;
 }
 /*====what-we-do====*/
+
+/*====Why-choose-kloudz====*/
+.why-choose-kloudz .center-primary-div {
+  width: 100%;
+  max-width: 843px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.why-choose-kloudz .box-item {
+  background-color: var(--white);
+  padding: 25px 25px 0 25px;
+  margin: 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.why-choose-kloudz strong {
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  display: block;
+}
+.why-choose-kloudz .box-item p {
+  color: #000000b2;
+  font-size: 14px;
+  font-weight: 300;
+}
+.why-choose-kloudz .box-item img {
+  margin: 50px -25px 0 auto;
+  text-align: right;
+  width: 200px;
+  height: 200px;
+}
+/*====Why-choose-kloudz====*/

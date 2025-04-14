@@ -62,7 +62,31 @@ $(document).ready(function () {
 
 
 
+// why-choose-kloudz
+$(document).ready(function(){
+       $(".why-choose-kloudz .owl-carousel").owlCarousel({
+         loop: true,
+         margin: 30,
+         nav: false,
+         dots: false,
+         autoplay: false,
+         autoplayTimeout: 3000,
+         responsive: {
+           0: {
+             items: 1
+           },
+           768: {
+             items: 2
+           },
+           1024: {
+             items: 3
+           }
+         }
+       });
+     });
 
+
+// why-choose-kloudz
 
 // Our-Services-slider
 $(document).ready(function () {
