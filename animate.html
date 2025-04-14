@@ -3,203 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ask Away! - Contact Form</title>
+    <title>Color Change on Scroll</title>
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4eefe 100%);
-            padding: 20px;
+            height: 300vh; /* Extra height to enable scrolling */
         }
         
         .container {
-            max-width: 600px;
-            width: 100%;
-            background-color: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            padding: 40px;
-            transform: translateY(30px);
-            opacity: 0;
-            animation: fadeIn 0.8s ease-out forwards;
+            padding: 20px;
+            max-width: 800px;
+            margin: 100px auto;
         }
         
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .title-section {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .subtitle {
-            color: #3a86ff;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 5px;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: slideUp 0.6s ease-out 0.3s forwards;
-        }
-        
-        h1 {
-            color: #333;
-            margin-bottom: 15px;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: slideUp 0.6s ease-out 0.5s forwards;
-        }
-        
-        .description {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 30px;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: slideUp 0.6s ease-out 0.7s forwards;
-        }
-        
-        .form-section h2 {
-            color: #333;
-            margin-bottom: 25px;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: slideUp 0.6s ease-out 0.9s forwards;
-        }
-        
-        .form-group {
+        .title {
+            font-size: 24px;
+            font-weight: bold;
             margin-bottom: 20px;
-            position: relative;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: slideUp 0.6s ease-out 1.1s forwards;
         }
         
-        .form-group:nth-child(2) {
-            animation-delay: 1.3s;
+        .vision-text {
+            font-size: 28px;
+            line-height: 1.4;
+            transition: color 0.3s ease;
         }
         
-        .form-group:nth-child(3) {
-            animation-delay: 1.5s;
+        .colored-text {
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
         
-        input, textarea {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-        
-        textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        input:focus, textarea:focus {
-            border-color: #3a86ff;
-            box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.2);
-            outline: none;
-        }
-        
-        input::placeholder, textarea::placeholder {
-            color: #aaa;
-            transition: all 0.3s ease;
-        }
-        
-        input:focus::placeholder, textarea:focus::placeholder {
-            opacity: 0.5;
-            transform: translateX(10px);
-        }
-        
-        button {
-            background-color: #3a86ff;
-            color: white;
-            border: none;
-            padding: 15px 25px;
-            font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: block;
-            margin: 30px auto 0;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: slideUp 0.6s ease-out 1.7s forwards;
-        }
-        
-        button:hover {
-            background-color: #2a75e8;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(58, 134, 255, 0.3);
-        }
-        
-        @keyframes slideUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 30px 20px;
-            }
+        .regular-text {
+            color: #999;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="title-section">
-            <div class="subtitle">Ask me anyway!</div>
-            <h1>Ask Away!</h1>
-            <p class="description">Have a Question? Need Expert Advice? We're Here to Help Whether It's About Our Services, Students, or Partnership Opportunities. Hesitate no More! Get Let's Find the Answers Together!</p>
-        </div>
-        
-        <div class="form-section">
-            <h2>Send a Message</h2>
-            <form id="contact-form">
-                <div class="form-group">
-                    <input type="text" placeholder="What's your Name?" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Message" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
+        <div class="title">Our Vision</div>
+        <div class="vision-text">
+            <span class="colored-text">To Revolutionize The Way Businesses Operate By Delivering Smart, Scalable, And Future-Ready Technology Solutions Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptates ducimus laboriosam cum a saepe rerum nihil aliquid eaque perferendis asperiores et incidunt, totam blanditiis placeat non veritatis aperiam! Aut cum est reiciendis aliquam maiores molestiae temporibus sunt dignissimos dolores adipisci fuga molestias optio, deleniti id quia velit, sit iusto saepe architecto unde. Blanditiis vitae, tempore dolorum rem ipsam maxime corporis saepe assumenda magnam qui deleniti veniam sed repudiandae placeat vel quibusdam eius exercitationem itaque mollitia ullam optio repellendus voluptas consequatur quas. Illum sit delectus fugiat laboriosam doloribus repudiandae, quisquam quo earum suscipit enim odio cumque est ducimus nobis amet exercitationem laborum itaque temporibus? Pariatur, voluptates maiores corporis hic dicta nesciunt provident. Corrupti perspiciatis ut ratione eligendi nisi exercitationem optio officia hic dignissimos at aut nostrum expedita illum quae ad, quas modi porro laudantium rerum voluptatem unde, error blanditiis a. Ea, dolorum aperiam? Ullam molestias labore voluptatibus iusto, alias est impedit, qui enim eos minima doloribus ad fuga, numquam eveniet neque illo deserunt facilis modi ab recusandae? Nisi, perspiciatis dolor cum ea laborum maiores quo necessitatibus dignissimos, sapiente aliquam officia ullam doloribus, a voluptatibus alias perferendis ex maxime enim id asperiores eligendi nam debitis! Animi non iure, doloremque obcaecati molestias ut quae placeat repudiandae consequatur consequuntur fuga quaerat. Ut illo omnis adipisci eaque sit incidunt aperiam voluptas enim sapiente ipsam sequi sint, labore, excepturi nisi consequuntur dolore officia explicabo! Assumenda tempora autem voluptatum? Necessitatibus, dolores aperiam deserunt error minima non saepe laudantium doloremque, harum animi mollitia laboriosam cumque nisi numquam dicta. Eius iste qui voluptatum repellat numquam earum pariatur voluptas quibusdam et aspernatur, suscipit quasi dolor impedit minus aperiam necessitatibus perspiciatis tenetur reiciendis sunt. Possimus quisquam fugiat nisi voluptates expedita culpa? Illo cumque doloremque ad itaque amet aliquid consequatur facere quas mollitia unde reprehenderit eum pariatur, delectus aut a modi animi repellendus alias! Accusamus veniam id ipsa, voluptas nam incidunt quia? Architecto nesciunt, doloremque voluptatem, enim dolores iure tempore ratione voluptates nostrum, nisi necessitatibus deleniti at praesentium. Dolore voluptas non asperiores suscipit fugit? Est provident facilis consequatur aliquid, aut illum officia velit voluptate modi sed atque aperiam quaerat laboriosam officiis ducimus praesentium qui quasi dignissimos amet reiciendis dicta vel totam reprehenderit. Necessitatibus in ex exercitationem vero optio officiis nesciunt deserunt quod. Ut, vero nostrum voluptas dolore aliquam quia deserunt quis. Nihil, consectetur culpa fugiat quidem accusamus earum, alias delectus illum quis dolorem similique ratione voluptatum? Deserunt corrupti placeat dolorem aut fugit iusto, atque ea deleniti iure excepturi tenetur possimus libero ut, quo ullam, perspiciatis illo reiciendis cum dolorum. Nesciunt consectetur consequuntur sequi, enim in quam inventore amet culpa possimus maiores rerum odit facere error voluptatibus corrupti vel fugit! Suscipit quo eaque ea sapiente sequi natus dolores voluptatum fuga blanditiis labore quae quasi beatae consectetur voluptatibus obcaecati nesciunt, accusamus reprehenderit maiores corrupti deleniti aspernatur voluptates rerum enim. Excepturi nam sed debitis esse nihil corrupti blanditiis repudiandae incidunt labore tenetur. Sed harum ipsa necessitatibus ipsum. Facilis atque harum in perferendis. Harum deleniti repudiandae repellendus obcaecati mollitia necessitatibus dolore similique asperiores praesentium esse.</span> 
+            <span class="regular-text">That Drive Innovation, Enhance Efficiency, And Accelerate Growth In A Rapidly Evolving Digital Landscape.</span>
         </div>
     </div>
 
     <script>
-        // Simple form validation and animation
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+        const coloredText = document.querySelector('.colored-text');
+        
+        // Define the colors for the gradient effect
+        const colors = [
+            '#000000', // Black
+            '#2563eb', // Blue
+            '#7c3aed', // Purple
+            '#db2777'  // Pink
+        ];
+        
+        window.addEventListener('scroll', () => {
+            // Calculate scroll percentage
+            const scrollPosition = window.scrollY;
+            const maxScroll = document.body.scrollHeight - window.innerHeight;
+            const scrollPercentage = Math.min(scrollPosition / maxScroll, 1);
             
-            // Add a success animation here
-            this.innerHTML = '<div style="text-align: center; padding: 40px;"><h2 style="color: #3a86ff;">Thank you!</h2><p>Your message has been sent successfully.</p></div>';
+            // Calculate color index based on scroll percentage
+            const colorIndex = Math.min(
+                Math.floor(scrollPercentage * colors.length),
+                colors.length - 1
+            );
             
-            // In a real application, you would handle form submission here
+            // Apply the color
+            coloredText.style.color = colors[colorIndex];
         });
     </script>
 </body>
 </html>
-
