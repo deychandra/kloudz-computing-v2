@@ -1564,7 +1564,46 @@ footer .copy-right {
 /*==== Core-Services====*/
 
 /*====Meets-Transformation====*/
-.meets-transformation{
-  background-color: #F7F7F6;
+.meets-transformation {
+  background-color: #f7f7f6;
+  position: relative;
+}
+.meets-transformation::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: url(../images/meets-transformation-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 60%;
+  z-index: 0;
+  width: 80%;
+}
+.meets-transformation h5 {
+  font-size: 46px;
+  font-weight: 400;
+}
+.meets-transformation .s-padding {
+  padding-left: 120px;
+}
+
+.meets-transformation .img-bx {
+  overflow: hidden;
+  mix-blend-mode: Luminosity;
+  height: 318px;
+}
+.meets-transformation .img-bx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.meets-transformation p {
+  color: #00000099;
+  font-size: 16px;
+}
+.meets-transformation .sm-padding {
+  padding-left: 60px;
 }
 /*====Meets-Transformation====*/
