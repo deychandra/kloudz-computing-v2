@@ -1,3 +1,21 @@
+// Sticky-header
+$(document).ready(function () {
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 15) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
+
+const hamburger = document.querySelector('.toggle-hamburger');
+hamburger.addEventListener('click', function () {
+  header.classList.toggle('open_nav');
+});
+
+});
+
 const container = document.querySelector('.parallax-container');
 if (container) {
        const item = container.querySelector('.it-solution');

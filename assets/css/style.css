@@ -146,9 +146,16 @@ footer .slide-btn span {
 /*===Header===*/
 header {
   padding: 20px 0;
-  position: relative;
-  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
 }
+header.sticky {
+  background-color: var(--white);
+}
+
 header .nav-wrap {
   display: flex;
   align-items: center;
@@ -181,6 +188,14 @@ header li a.active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+header .hamburger {
+  cursor: pointer;
+  display: none;
+  background-color: #ffffff;
+  padding: 5px 5px 5px 5px;
+  border-radius: 40px;
+  transition: all 0.4s ease-in;
+}
 /*===Header===*/
 
 /*===Hero===*/
@@ -193,7 +208,6 @@ header li a.active {
   position: relative;
   overflow: hidden;
   background-size: cover;
-  margin-top: -136px;
 }
 .hero .center-bx {
   position: relative;
@@ -1157,7 +1171,6 @@ footer .copy-right {
   background-position: center;
   background-size: cover;
   padding: 240px 0 130px;
-  margin-top: -136px;
   position: relative;
   overflow: hidden;
 }
