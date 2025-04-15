@@ -12,10 +12,10 @@
     font-size: 40px;
     line-height: 55px;
   }
-  .subheading{
+  .subheading {
     font-size: 40px;
   }
-  .industries-serve h3{
+  .industries-serve h3 {
     font-size: 30px;
   }
 }
@@ -84,7 +84,7 @@
     padding: 20px;
     margin-bottom: 0px;
   }
-  .we-care-it .center-careit{
+  .we-care-it .center-careit {
     font-size: 20px;
   }
 }
@@ -96,5 +96,12 @@
   }
   header {
     padding: 10px 0;
+  }
+
+  .pt-100 {
+    padding-top: 30px;
+  }
+  .pb-100 {
+    padding-bottom: 40px;
   }
 }
