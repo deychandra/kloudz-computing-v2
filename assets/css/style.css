@@ -575,6 +575,7 @@ header .hamburger {
   height: 100%;
   object-fit: cover;
   border-radius: 100%;
+  object-position: top;
 }
 .customer-review strong {
   color: #44533c;
